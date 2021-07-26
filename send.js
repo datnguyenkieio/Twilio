@@ -11,8 +11,6 @@ const COUNTRY_CODE = {
 
 const sendSMS = async (message, rawPhone, country, _event = '') => {
     const phone = formatPhoneWithCountryCode(rawPhone, country)
-    console.log(message)
-    console.log(phone)
     // return { rs: message, phone }
     return client.messages
         .create({
